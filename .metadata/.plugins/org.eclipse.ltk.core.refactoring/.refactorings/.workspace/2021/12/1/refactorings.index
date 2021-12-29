@@ -1,0 +1,17 @@
+1640796944940	Delete resource '5_uart_tx/2_gpio_output Debug.launch'
+1640796948426	Delete 3 resources
+1640796955631	Delete 2 resources
+1640800075037	Delete resource '6_uart_printf/Debug/5_uart_tx.elf'
+1640800079138	Delete resource '6_uart_printf/5_uart_tx.launch'
+1640800089188	Delete 8 resources
+1640800924007	Delete resource '7_uart_modular/6_uart_printf (1).launch'
+1640800981130	Delete resource '7_uart_modular/Debug/6_uart_printf.elf'
+1640801002017	Delete resource '7_uart_modular/7_uart_modular.launch'
+1640801192867	Delete resource '8_uart_rx/Debug/7_uart_modular.elf'
+1640801195580	Delete resource '8_uart_rx/7_uart_modular.launch'
+1640801201480	Delete 6 resources
+1640801225217	Delete 4 resources
+1640807797593	Rename resource '9_ADC'
+1640807808174	Delete resource '9_adc/Debug/8_uart_rx.elf'
+1640807812359	Delete resource '9_adc/8_uart_rx.launch'
+1640807817976	Delete 3 resources

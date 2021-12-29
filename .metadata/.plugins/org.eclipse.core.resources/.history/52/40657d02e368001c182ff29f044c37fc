@@ -1,0 +1,13 @@
+/*
+ * adc.c
+ *
+ *  Created on: Dec 29, 2021
+ *      Author: michael
+ */
+
+#define ADC1EN		(1U<<9)
+
+void pa1_adc_init(void)
+{
+	/* Enable clock access to adc pin's port*/
+}
