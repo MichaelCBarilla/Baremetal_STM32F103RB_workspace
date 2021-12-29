@@ -1,0 +1,1 @@
+# Baremetal_STM32F103RB_workspace
