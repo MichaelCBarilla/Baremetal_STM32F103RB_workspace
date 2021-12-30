@@ -27,3 +27,6 @@
 1640883709573	Delete resource '13_output_compare/Debug/12_timers.elf'
 1640883711615	Delete resource '13_output_compare/12_timers.launch'
 1640883715729	Delete 3 resources
+1640888233082	Delete resource '14_input_capture/Debug/13_output_compare.elf'
+1640888235007	Delete resource '14_input_capture/13_output_compare.launch'
+1640888238904	Delete resource '14_input_capture/Debug'
