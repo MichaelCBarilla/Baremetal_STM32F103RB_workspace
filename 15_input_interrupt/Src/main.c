@@ -4,32 +4,51 @@
 #include "uart.h"
 #include "systick.h"
 #include "tim.h"
+#include "exti.h"
 
 #define GPIOAEN			(1U<<2)
 
 #define PIN5			(1U<<5)
 #define LED_PIN			(PIN5)
 
-int timestamp = 0;
-
-/* Set up : Connect a jumper wire from PA0 to PA6 */
+static void exti_callback(void);
 
 int main(void)
 {
-	tim2_pa0_output_compare();
-	tim3_pa6_input_capture();
+	RCC->APB2ENR |= GPIOAEN;
 
+	GPIOA->CRL &= ~(1U<<23);
+	GPIOA->CRL &= ~(1U<<22);
+	GPIOA->CRL |= (1U<<21);
+	GPIOA->CRL &= ~(1U<<20);
+
+	uart2_tx_init();
+
+	pc13_exti_init();
 
 	while(1)
 	{
-		/* Wait until edge is captured */
-		while ((TIM3->SR & SR_CC1IF) == 0) {}
 
-		/* Read captured value */
-		timestamp = TIM3->CCR1;
 
 	}
 }
 
+static void exti_callback(void)
+{
+	printf("BTN Pressed...\n\r");
+	GPIOA->ODR ^= LED_PIN;
+}
+
+
+void EXTI15_10_IRQHandler(void)
+{
+	if (EXTI->PR & LINE13) {
+		/* Clear the PR flag */
+		EXTI->PR |= LINE13;
+
+		/* Do Something */
+		exti_callback();
+	}
+}
 
 
