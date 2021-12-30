@@ -21,3 +21,6 @@
 1640879333075	Delete resource '11_systick_delay/10_adc_continuous_conversion.launch'
 1640879336516	Delete resource '11_systick_delay/Debug/10_adc_continuous_conversion.elf'
 1640879341755	Delete 4 resources
+1640882511218	Delete resource '12_timers/Debug/11_systick_delay.elf'
+1640882513802	Delete resource '12_timers/11_systick_delay.launch'
+1640882518637	Delete 3 resources
