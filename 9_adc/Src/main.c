@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include "stm32f1xx.h"
 #include "uart.h"
+#include "adc.h"
 
 #define GPIOAEN			(1U<<2)
 
@@ -10,27 +11,20 @@
 
 
 
-char key;
+uint32_t sensor_value;
 int main(void)
 {
-	/* Enable clock access to GPIOA */
-	RCC->APB2ENR |= GPIOAEN;
 
-	/* Set PA5 as output pin */
-	GPIOA->CRL |= (1U<<21);
-	GPIOA->CRL &= ~(1U<<20);
-	GPIOA->CRL &= ~(1U<<22);
-	GPIOA->CRL &= ~(1U<<23);
 
 	uart2_rxtx_init();
+	pa1_adc_init();
 
 	while(1)
 	{
-		key = uart2_read();
-		if (key == '1')
-			GPIOA->ODR |= LED_PIN;
-		else
-			GPIOA->ODR &= ~LED_PIN;
+		start_conversion();
+
+		sensor_value = adc_read();
+		printf("Sensor value : %d \n\r", (int)sensor_value);
 	}
 }
 

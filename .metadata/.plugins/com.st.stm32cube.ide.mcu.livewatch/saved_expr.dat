@@ -1,0 +1,8 @@
+sensor_value
+RCC->APB2ENR
+(GPIOA->CRL >> 4) & 0xF
+ADC1->SQR3 & 0xF
+ADC1->SQR1
+ADC1->CR2
+ADC1->CR2
+CR2_SWSTART
