@@ -11,7 +11,7 @@
 #include "stm32f1xx.h"
 
 void tim2_1hz_init(void);
-void tim2_output_compare(void);
+void tim2_pa0_output_compare(void);
 
 #define SR_UIF (1U<<0)
 #endif /* TIM_C_ */
