@@ -1,1 +1,3 @@
-timestamp
+USART2->DR & 0xFF
+CR1_TE
+RCC->APB1ENR

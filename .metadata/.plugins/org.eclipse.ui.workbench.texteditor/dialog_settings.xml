@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="EXTI0_IRQHandler"/>
+		<item key="selection" value="ADC1_2_IRQn"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="RXNE"/>
+			<item value="IRQHandler"/>
+			<item value="SWSTA"/>
+			<item value="adc1_2_irqn"/>
+			<item value="uartread"/>
+			<item value="uart2_read"/>
 			<item value="EXTI0_IRQHANDLer"/>
 			<item value="AFIO"/>
-			<item value="TIM2_IRQ"/>
-			<item value="USART_TypeDef"/>
-			<item value="USART_T"/>
-			<item value="AF"/>
-			<item value="GPIOA_Ba"/>
 		</list>
 		<list key="replacehistory">
 		</list>
