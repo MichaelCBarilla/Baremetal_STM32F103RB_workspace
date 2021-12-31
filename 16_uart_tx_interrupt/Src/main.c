@@ -8,13 +8,13 @@
 
 static void uart_callback(void);
 
-char message[5] = "he\n\r\0";
+uint8_t message[5] = "TEST\0";
 int main(void)
 {
 
 
 	uart2_tx_interrupt_init();
-	uart2_write(*message);
+	USART2->DR = ((*message) & 0xFF);
 	while(1)
 	{
 
@@ -23,14 +23,14 @@ int main(void)
 
 static void uart_callback(void)
 {
-	for (int i = 0; i < 4; i++) {
-		uart2_write(message[i]);
+	for (uint8_t i = 1; i < 5; i++) {
+		USART2->DR = (message[i] & 0xFF);
 	}
 }
 
 void USART2_IRQHandler(void)
 {
-	/* Check if RXNE is set */
+	/* Check if TXE is set */
 	if (USART2->SR & SR_TXE) {
 
 		/* Do something */
